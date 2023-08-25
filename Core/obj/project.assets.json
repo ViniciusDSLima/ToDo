@@ -866,11 +866,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Pessoal\\C#\\ToDo\\ToDo\\ClassLibrary2\\ClassLibrary2.csproj",
-      "projectName": "ClassLibrary2",
-      "projectPath": "C:\\Pessoal\\C#\\ToDo\\ToDo\\ClassLibrary2\\ClassLibrary2.csproj",
+      "projectUniqueName": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Core\\Core.csproj",
+      "projectName": "Core",
+      "projectPath": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Core\\Core.csproj",
       "packagesPath": "C:\\Users\\vinic\\.nuget\\packages\\",
-      "outputPath": "C:\\Pessoal\\C#\\ToDo\\ToDo\\ClassLibrary2\\obj\\",
+      "outputPath": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\vinic\\AppData\\Roaming\\NuGet\\NuGet.Config"

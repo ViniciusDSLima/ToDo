@@ -866,11 +866,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Pessoal\\C#\\ToDo\\ToDo\\ClassLibrary4\\ClassLibrary4.csproj",
-      "projectName": "ClassLibrary4",
-      "projectPath": "C:\\Pessoal\\C#\\ToDo\\ToDo\\ClassLibrary4\\ClassLibrary4.csproj",
+      "projectUniqueName": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Infra\\Infra.csproj",
+      "projectName": "Infra",
+      "projectPath": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Infra\\Infra.csproj",
       "packagesPath": "C:\\Users\\vinic\\.nuget\\packages\\",
-      "outputPath": "C:\\Pessoal\\C#\\ToDo\\ToDo\\ClassLibrary4\\obj\\",
+      "outputPath": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Infra\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\vinic\\AppData\\Roaming\\NuGet\\NuGet.Config"

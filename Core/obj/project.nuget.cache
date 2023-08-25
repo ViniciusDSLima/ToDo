@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hcVvIjonWUCg8cJIqbwfoW7CtsAF/RhEN+a0O4jHWaYtp9z2JB6Wj4C51JygAJ6Bj4zKKdMmFHsxSZyajW1OCA==",
+  "dgSpecHash": "7jud+f6m3G7ULcaGFIA15rrGnUrYPkDnTwKGoSqCHBA/RyFErZo6s1533F17sh1PO3cTcNU7AwhpRk/UtAm0Yg==",
   "success": true,
-  "projectFilePath": "C:\\Pessoal\\C#\\ToDo\\ToDo\\ClassLibrary4\\ClassLibrary4.csproj",
+  "projectFilePath": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Core\\Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vinic\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\vinic\\.nuget\\packages\\fluentvalidation\\11.7.1\\fluentvalidation.11.7.1.nupkg.sha512",
