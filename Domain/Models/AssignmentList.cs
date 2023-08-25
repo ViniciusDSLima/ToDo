@@ -1,4 +1,6 @@
+using System.Collections.ObjectModel;
 using ClassLibrary3.Validators;
+using Microsoft.VisualBasic;
 
 namespace ClassLibrary3.Models;
 
@@ -9,7 +11,7 @@ public class AssignmentList : EntityBase
     public int UsuarioId { get; set; }
 
     public virtual Usuario Usuario { get; set; }
-    public virtual List<Assignment> Assignments { get; set; }
+    public virtual Collection<Assignment> Assignments { get; set; } = new();
 
     public AssignmentList()
     {

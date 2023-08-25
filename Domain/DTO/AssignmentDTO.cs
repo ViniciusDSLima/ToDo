@@ -1,4 +1,4 @@
-namespace ClassLibrary3.DTO;
+
 
 public class AssignmentDTO
 {

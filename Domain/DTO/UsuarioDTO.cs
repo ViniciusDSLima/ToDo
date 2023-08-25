@@ -1,17 +1,17 @@
 namespace ClassLibrary3.DTO;
 
-public class UserDTO
+public class UsuarioDTO
 {
     public int Id { get; set; }
     public string Name { get; set; }
     public string Email { get; set; }
     public string Password { get; set; }
 
-    public UserDTO()
+    public UsuarioDTO()
     {
     }
 
-    public UserDTO(int id, string name, string email, string password)
+    public UsuarioDTO(int id, string name, string email, string password)
     {
         Id = id;
         Name = name;

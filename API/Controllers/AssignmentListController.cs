@@ -9,12 +9,12 @@ namespace API.Controllers;
 [Route("api/v1/AssignmentList")]
 public class AssignmentListController : ControllerBase
 {
-    private readonly IAssignmentService _assignmentService;
+    private readonly IAssignmentListService _assignmentListService;
     private readonly IMapper _mapper;
 
-    public AssignmentListController(IAssignmentService assignmentService, IMapper mapper)
+    public AssignmentListController(IAssignmentListService assignmentListService, IMapper mapper)
     {
-        _assignmentService = assignmentService;
+        _assignmentListService = assignmentListService;
         _mapper = mapper;
     }
 
@@ -26,7 +26,7 @@ public class AssignmentListController : ControllerBase
         try
         {
             var assignmentList =
-                await _assignmentService.Create(_mapper.Map<AssignmentListDTO>(registerAssignmentListRequest));
+                await _assignmentListService.Create(_mapper.Map<AssignmentListDTO>(registerAssignmentListRequest));
 
             return Ok("AssignmentList criada com sucesso " + assignmentList);
         }
@@ -43,7 +43,7 @@ public class AssignmentListController : ControllerBase
         try
         {
             var assignmentList =
-                await _assignmentService.Update(_mapper.Map<AssignmentListDTO>(updateAssignmentListRequest));
+                await _assignmentListService.Update(_mapper.Map<AssignmentListDTO>(updateAssignmentListRequest));
             return Ok("AssignmentList atualizada com sucesso " + assignmentList);
         }
         catch (Exception e)
@@ -57,7 +57,7 @@ public class AssignmentListController : ControllerBase
     {
         try
         {
-            var assignmentList = await _assignmentService.Get();
+            var assignmentList = await _assignmentListService.Get();
 
             if (assignmentList == null)
             {
@@ -78,7 +78,7 @@ public class AssignmentListController : ControllerBase
     {
         try
         {
-            var assignmentList = await _assignmentService.Get(id);
+            var assignmentList = await _assignmentListService.Get(id);
 
             if (assignmentList == null)
             {

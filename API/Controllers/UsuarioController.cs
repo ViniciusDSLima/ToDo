@@ -25,7 +25,7 @@ public class UsuarioController : ControllerBase
     {
         try
         {
-            var user = await _userService.Create(_mapper.Map<UserDTO>(registerUsuarioRequest));
+            var user = await _userService.Create(_mapper.Map<UsuarioDTO>(registerUsuarioRequest));
             return Ok("Usuario cadastrado com sucesso " + user);
         }
         catch (Exception e)
@@ -40,7 +40,7 @@ public class UsuarioController : ControllerBase
     {
         try
         {
-            var newUser = await _userService.Update(_mapper.Map<UserDTO>(updateUsuarioRequest));
+            var newUser = await _userService.Update(_mapper.Map<UsuarioDTO>(updateUsuarioRequest));
             return Ok("Usuario atualizado com sucesso " + newUser);
         }
         catch (Exception e)

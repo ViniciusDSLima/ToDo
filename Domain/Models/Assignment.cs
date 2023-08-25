@@ -11,7 +11,9 @@ public class Assignment : EntityBase
     public DateTime? ConcluedAt { get; set; }
     public DateTime DeadLine { get; set; }
     public int AssignmentListId { get; set; }
-    public AssignmentList AssignmentList{ get; set; }
+
+    public virtual Usuario Usuario { get; set; } 
+    public virtual AssignmentList AssignmentList{ get; set; }
 
     public Assignment()
     {
