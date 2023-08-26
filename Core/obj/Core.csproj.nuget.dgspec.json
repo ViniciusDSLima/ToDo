@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Pessoal\\C#\\ToDo\\ToDo\\Domain\\Domain.csproj": {}
+    "C:\\Pessoal\\C#\\ToDo\\ToDo\\Core\\Core.csproj": {}
   },
   "projects": {
-    "C:\\Pessoal\\C#\\ToDo\\ToDo\\Domain\\Domain.csproj": {
+    "C:\\Pessoal\\C#\\ToDo\\ToDo\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Domain\\Domain.csproj",
-        "projectName": "Domain",
-        "projectPath": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Core\\Core.csproj",
+        "projectName": "Core",
+        "projectPath": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\vinic\\.nuget\\packages\\",
-        "outputPath": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Domain\\obj\\",
+        "outputPath": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vinic\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -46,23 +46,7 @@
               "target": "Package",
               "version": "[11.7.1, )"
             },
-            "Microsoft.AspNetCore.Http": {
-              "target": "Package",
-              "version": "[2.2.2, )"
-            },
             "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[7.0.10, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.10, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.10, )"
             },
