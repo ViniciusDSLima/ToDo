@@ -3,7 +3,7 @@ using ClassLibrary3.Validators;
 
 namespace ClassLibrary3.Models;
 
-public class Usuario : EntityBase
+public class User : EntityBase
 {
     public string Name { get; set; }
     public string Email { get; set; }
@@ -12,12 +12,12 @@ public class Usuario : EntityBase
     public virtual Collection<Assignment> Assignments { get; set; } = new();
     public virtual Collection<AssignmentList> AssignmentsLists { get; set; } = new();
 
-    public Usuario()
+    public User()
     {
         
     }
 
-    public Usuario(string name, string email, string password)
+    public User(string name, string email, string password)
     {
         Name = name;
         Email = email;

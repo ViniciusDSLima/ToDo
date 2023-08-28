@@ -3,10 +3,10 @@ using FluentValidation;
 
 namespace ClassLibrary3.Validators;
 
-public class UsuarioValidator : AbstractValidator<Usuario>
+public class UserValidator : AbstractValidator<User>
 {
 
-    public UsuarioValidator()
+    public UserValidator()
     {
         RuleFor(x => x)
             .NotEmpty()
