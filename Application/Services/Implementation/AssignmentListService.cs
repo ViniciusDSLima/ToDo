@@ -20,32 +20,71 @@ public class AssignmentListService : IAssignmentListService
         _httpContextAcessor = httpContextAcessor;
     }
 
+    public int GetUsuarioId()
+    {
+        var claim = _httpContextAcessor.HttpContext.User.Claims.FirstOrDefault(u => u.Type == "Id");
+        if (claim == null)
+        {
+            throw new Exception("Claim nula");
+        }
+
+        return int.Parse(claim.Value);
+    }
+
     public async Task<AssignmentListDTO> Create(AssignmentListDTO assignmentListDto)
     {
-        assignmentListDto.UsuarioId = GetById();
-        var assignment = await _assignmentListRepository.Create(_mapper.Map<AssignmentList>(assignmentListDto));
+        assignmentListDto.UsuarioId = GetUsuarioId();
+        var assignmentList = await _assignmentListRepository.Create(_mapper.Map<AssignmentList>(assignmentListDto));
+        return _mapper.Map<AssignmentListDTO>(assignmentList);
+    }
+
+    public async Task<AssignmentListDTO> Update(AssignmentListDTO assignmentListDto)
+    {
+        var assignmentListExists = await _assignmentListRepository.GetById(assignmentListDto.Id, GetUsuarioId());
+
+        if (assignmentListExists == null)
+        {
+            throw new Exception("Nao existe Lista com o id informado");
+        }
+
+        var assignmentList = _mapper.Map<AssignmentList>(assignmentListDto);
+        assignmentList.UsuarioId = GetUsuarioId();
+        assignmentList.validate();
+
+        var assignmentListUpdated = await _assignmentListRepository.Update(assignmentList);
+
+        return _mapper.Map<AssignmentListDTO>(assignmentListUpdated);
+    }
+
+    public async Task<List<AssignmentListDTO>> GetAll()
+    {
+        var assignmentList = await _assignmentListRepository.GetAll(GetUsuarioId());
         
-        return _mapper.Map<AssignmentListDTO>(assignment);
+        return _mapper.Map<List<AssignmentListDTO>>(assignmentList);
     }
 
-    public Task<AssignmentListDTO> Update(AssignmentListDTO assignmentListDto)
+    public async Task<AssignmentListDTO> GetById(int id)
     {
-        throw new NotImplementedException();
-    }
+        var assignmentList = await _assignmentListRepository.GetById(id, GetUsuarioId());
 
-    public Task<List<AssignmentListDTO>> Get()
-    {
-        throw new NotImplementedException();
-    }
+        if (assignmentList == null)
+        {
+            throw new Exception("AssingmentList nao existente com o Id informado");
+        }
 
-    public Task<AssignmentListDTO> GetById(int userId)
-    {
-        throw new NotImplementedException();
+        return _mapper.Map<AssignmentListDTO>(assignmentList);
     }
     
 
-    public Task Delete(int id)
+    public async Task Delete(int id)
     {
-        throw new NotImplementedException();
+        var assignemntList = await _assignmentListRepository.GetById(id, GetUsuarioId());
+
+        if (assignemntList == null)
+        {
+            throw new Exception("Nao exite assignmentList existente com o id informado");
+        }
+        
+        await _assignmentListRepository.Delete(id);
     }
 }

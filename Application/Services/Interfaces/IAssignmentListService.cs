@@ -6,7 +6,7 @@ public interface IAssignmentListService
 {
     Task<AssignmentListDTO> Create(AssignmentListDTO assignmentListDto);
     Task<AssignmentListDTO> Update(AssignmentListDTO assignmentListDto);
-    Task<List<AssignmentListDTO>> Get();
+    Task<List<AssignmentListDTO>> GetAll();
     Task<AssignmentListDTO> GetById(int id);
     Task Delete(int id);
 }

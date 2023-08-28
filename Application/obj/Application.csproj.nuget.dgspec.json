@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Pessoal\\C#\\ToDo\\ToDo\\Application\\Application.csproj": {}
+    "/home/vinicius/Projetos/C#/IFCE/ToDo/Application/Application.csproj": {}
   },
   "projects": {
-    "C:\\Pessoal\\C#\\ToDo\\ToDo\\Application\\Application.csproj": {
+    "/home/vinicius/Projetos/C#/IFCE/ToDo/Application/Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Application\\Application.csproj",
+        "projectUniqueName": "/home/vinicius/Projetos/C#/IFCE/ToDo/Application/Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\vinic\\.nuget\\packages\\",
-        "outputPath": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Application\\obj\\",
+        "projectPath": "/home/vinicius/Projetos/C#/IFCE/ToDo/Application/Application.csproj",
+        "packagesPath": "/home/vinicius/.nuget/packages/",
+        "outputPath": "/home/vinicius/Projetos/C#/IFCE/ToDo/Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\vinic\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/vinicius/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -26,11 +26,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Pessoal\\C#\\ToDo\\ToDo\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Domain\\Domain.csproj"
+              "/home/vinicius/Projetos/C#/IFCE/ToDo/Domain/Domain.csproj": {
+                "projectPath": "/home/vinicius/Projetos/C#/IFCE/ToDo/Domain/Domain.csproj"
               },
-              "C:\\Pessoal\\C#\\ToDo\\ToDo\\Infra\\Infra.csproj": {
-                "projectPath": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Infra\\Infra.csproj"
+              "/home/vinicius/Projetos/C#/IFCE/ToDo/Infra/Infra.csproj": {
+                "projectPath": "/home/vinicius/Projetos/C#/IFCE/ToDo/Infra/Infra.csproj"
               }
             }
           }
@@ -48,6 +48,10 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
             },
             "FluentValidation": {
               "target": "Package",
@@ -94,21 +98,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.413\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/vinicius/.dotnet/sdk/7.0.400/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Pessoal\\C#\\ToDo\\ToDo\\Domain\\Domain.csproj": {
+    "/home/vinicius/Projetos/C#/IFCE/ToDo/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Domain\\Domain.csproj",
+        "projectUniqueName": "/home/vinicius/Projetos/C#/IFCE/ToDo/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\vinic\\.nuget\\packages\\",
-        "outputPath": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Domain\\obj\\",
+        "projectPath": "/home/vinicius/Projetos/C#/IFCE/ToDo/Domain/Domain.csproj",
+        "packagesPath": "/home/vinicius/.nuget/packages/",
+        "outputPath": "/home/vinicius/Projetos/C#/IFCE/ToDo/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\vinic\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/vinicius/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -136,6 +140,10 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[11.7.1, )"
@@ -181,21 +189,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.413\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/vinicius/.dotnet/sdk/7.0.400/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Pessoal\\C#\\ToDo\\ToDo\\Infra\\Infra.csproj": {
+    "/home/vinicius/Projetos/C#/IFCE/ToDo/Infra/Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Infra\\Infra.csproj",
+        "projectUniqueName": "/home/vinicius/Projetos/C#/IFCE/ToDo/Infra/Infra.csproj",
         "projectName": "Infra",
-        "projectPath": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Infra\\Infra.csproj",
-        "packagesPath": "C:\\Users\\vinic\\.nuget\\packages\\",
-        "outputPath": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Infra\\obj\\",
+        "projectPath": "/home/vinicius/Projetos/C#/IFCE/ToDo/Infra/Infra.csproj",
+        "packagesPath": "/home/vinicius/.nuget/packages/",
+        "outputPath": "/home/vinicius/Projetos/C#/IFCE/ToDo/Infra/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\vinic\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/vinicius/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -207,8 +215,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Pessoal\\C#\\ToDo\\ToDo\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Pessoal\\C#\\ToDo\\ToDo\\Domain\\Domain.csproj"
+              "/home/vinicius/Projetos/C#/IFCE/ToDo/Domain/Domain.csproj": {
+                "projectPath": "/home/vinicius/Projetos/C#/IFCE/ToDo/Domain/Domain.csproj"
               }
             }
           }
@@ -227,6 +235,10 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[11.7.1, )"
@@ -272,7 +284,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.413\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/vinicius/.dotnet/sdk/7.0.400/RuntimeIdentifierGraph.json"
         }
       }
     }

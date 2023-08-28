@@ -10,7 +10,7 @@ public class AssignmentList : EntityBase
     public string Name { get; set; }
     public int UsuarioId { get; set; }
 
-    public virtual Usuario Usuario { get; set; }
+    public virtual User User { get; set; }
     public virtual Collection<Assignment> Assignments { get; set; } = new();
 
     public AssignmentList()

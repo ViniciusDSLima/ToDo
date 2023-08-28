@@ -28,7 +28,7 @@ public class User : EntityBase
 
     public override bool validate()
     {
-        var validator = new UsuarioValidator();
+        var validator = new UserValidator();
         var validation = validator.Validate(this);
 
         if (validation.IsValid)

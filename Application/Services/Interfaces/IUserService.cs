@@ -4,9 +4,9 @@ namespace ClassLibrary1.Interfaces;
 
 public interface IUserService
 {
-    Task<UsuarioDTO> Create(UsuarioDTO usuarioDto);
-    Task<UsuarioDTO> Update(UsuarioDTO usuarioDto);
-    Task<List<UsuarioDTO>> Get();
-    Task<UsuarioDTO> Get(int id);
+    Task<UserDTO> Create(UserDTO userDto);
+    Task<UserDTO> Update(UserDTO userDto);
+    Task<List<UserDTO>> Get();
+    Task<UserDTO> Get(int id);
     Task Delete(int id);
 }

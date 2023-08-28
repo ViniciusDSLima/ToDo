@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ClassLibrary4.Map;
 
-public class UsuarioMap : IEntityTypeConfiguration<Usuario>
+public class UsuarioMap : IEntityTypeConfiguration<User>
 {
-    public void Configure(EntityTypeBuilder<Usuario> builder)
+    public void Configure(EntityTypeBuilder<User> builder)
     {
         builder.ToTable("Usuario");
 
@@ -27,12 +27,12 @@ public class UsuarioMap : IEntityTypeConfiguration<Usuario>
             .HasMaxLength(20);
 
         builder.HasMany(u => u.AssignmentsLists)
-            .WithOne(u => u.Usuario)
+            .WithOne(u => u.User)
             .HasForeignKey(u => u.UsuarioId)
             .OnDelete(DeleteBehavior.Restrict);
 
         builder.HasMany(u => u.Assignments)
-            .WithOne(u => u.Usuario)
+            .WithOne(u => u.User)
             .HasForeignKey(u => u.UsuarioId)
             .OnDelete(DeleteBehavior.Restrict);
 

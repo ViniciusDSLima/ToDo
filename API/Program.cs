@@ -1,4 +1,38 @@
+using API.Request;
+using API.Request.Assignment;
+using API.Request.AssignmentList;
+using AutoMapper;
+using ClassLibrary3.DTO;
+using ClassLibrary3.Models;
+using ClassLibrary4.Context;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var autoMapperConfig = new MapperConfiguration(config =>
+{
+    config.CreateMap<User, UserDTO>().ReverseMap();
+    config.CreateMap<RegisterUsuarioRequest, UserDTO>().ReverseMap();
+    config.CreateMap<UserDTO, UpdateUsuarioRequest>().ReverseMap();
+
+    config.CreateMap<Assignment, AssignmentDTO>().ReverseMap();
+    config.CreateMap<RegisterAssignmentRequest, UserDTO>().ReverseMap();
+    config.CreateMap<UserDTO, UpdateAssignmentRequest>().ReverseMap();
+
+    config.CreateMap<AssignmentList, AssignmentListDTO>().ReverseMap();
+    config.CreateMap<RegisterAssignmentListRequest, AssignmentListDTO>().ReverseMap();
+    config.CreateMap<AssignmentListDTO, UpdateAssignmentListRequest>().ReverseMap();
+
+
+});
+
+
+var mysqlConnection = builder.Configuration.GetConnectionString("DefautlConnection");
+builder.Services.AddDbContext<TodoDbContext>(options => options.UseMySql(
+    mysqlConnection, ServerVersion.AutoDetect(mysqlConnection)));
+
+
+
 
 // Add services to the container.
 

@@ -6,7 +6,7 @@ namespace ClassLibrary4.Context;
 
 public class TodoDbContext : DbContext
 {
-    public DbSet<Usuario> Usuarios { get; set; }
+    public DbSet<User> Usuarios { get; set; }
     public DbSet<Assignment> Assignments { get; set; }
     public DbSet<AssignmentList> AssignmentLists  { get; set; }
 

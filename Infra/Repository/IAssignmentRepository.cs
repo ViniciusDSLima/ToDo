@@ -8,4 +8,5 @@ public interface IAssignmentRepository : IEntityBaseRepository<Assignment>
     Task<List<Assignment>> GetAll(int userId);
     Task<List<Assignment>> SearchByDescription(string description);
     Task Delete(int userId, int assignmentId);
+    Task<Assignment> GetByName(string name);
 }

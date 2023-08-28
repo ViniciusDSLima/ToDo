@@ -57,7 +57,7 @@ public class AssignmentListController : ControllerBase
     {
         try
         {
-            var assignmentList = await _assignmentListService.Get();
+            var assignmentList = await _assignmentListService.GetAll();
 
             if (assignmentList == null)
             {
@@ -78,7 +78,7 @@ public class AssignmentListController : ControllerBase
     {
         try
         {
-            var assignmentList = await _assignmentListService.Get(id);
+            var assignmentList = await _assignmentListService.GetById(id);
 
             if (assignmentList == null)
             {
