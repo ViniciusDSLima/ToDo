@@ -74,6 +74,63 @@
           }
         }
       },
+      "libsodium/1.0.18": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1"
+        },
+        "runtimeTargets": {
+          "runtimes/linux-musl-x64/native/libsodium.so": {
+            "assetType": "native",
+            "rid": "linux-musl-x64"
+          },
+          "runtimes/linux-x64/native/libsodium.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-x64/native/libsodium.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-x64/native/libsodium.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/libsodium.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Cryptography.Internal/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.Internal.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.Internal.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Cryptography.KeyDerivation/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Cryptography.Internal": "2.1.0"
+        },
+        "compile": {
+          "lib/netcoreapp2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Http/2.2.2": {
         "type": "package",
         "dependencies": {
@@ -376,6 +433,25 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Identity.Core/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Cryptography.KeyDerivation": "2.1.0",
+          "Microsoft.Extensions.Logging": "2.1.0",
+          "Microsoft.Extensions.Options": "2.1.0",
+          "System.ComponentModel.Annotations": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Identity.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Identity.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Logging/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -629,6 +705,36 @@
             "assetType": "native",
             "rid": "win-x86"
           }
+        }
+      },
+      "ScottBrady91.AspNetCore.Identity.Argon2PasswordHasher/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Identity.Core": "2.1.0",
+          "Sodium.Core": "1.2.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/ScottBrady91.AspNetCore.Identity.Argon2PasswordHasher.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/ScottBrady91.AspNetCore.Identity.Argon2PasswordHasher.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Sodium.Core/1.2.3": {
+        "type": "package",
+        "dependencies": {
+          "System.ValueTuple": "4.5.0",
+          "libsodium": "1.0.18"
+        },
+        "compile": {
+          "lib/netstandard2.0/Sodium.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Sodium.Core.dll": {}
         }
       },
       "Swashbuckle.AspNetCore/6.5.0": {
@@ -942,6 +1048,15 @@
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
       "System.Windows.Extensions/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -975,7 +1090,8 @@
           "Infra": "1.0.0",
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.EntityFrameworkCore": "7.0.10",
-          "Pomelo.EntityFrameworkCore.MySql": "7.0.0"
+          "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
+          "ScottBrady91.AspNetCore.Identity.Argon2PasswordHasher": "1.4.0"
         },
         "compile": {
           "bin/placeholder/Application.dll": {}
@@ -993,7 +1109,8 @@
           "FluentValidation": "11.7.1",
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.EntityFrameworkCore": "7.0.10",
-          "Pomelo.EntityFrameworkCore.MySql": "7.0.0"
+          "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
+          "ScottBrady91.AspNetCore.Identity.Argon2PasswordHasher": "1.4.0"
         },
         "compile": {
           "bin/placeholder/Domain.dll": {}
@@ -1012,7 +1129,8 @@
           "FluentValidation": "11.7.1",
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.EntityFrameworkCore": "7.0.10",
-          "Pomelo.EntityFrameworkCore.MySql": "7.0.0"
+          "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
+          "ScottBrady91.AspNetCore.Identity.Argon2PasswordHasher": "1.4.0"
         },
         "compile": {
           "bin/placeholder/Infra.dll": {}
@@ -1135,6 +1253,53 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "libsodium/1.0.18": {
+      "sha512": "Ajv3AR9Qg/C4SQcE2ONx/UieeKnn5lSvVNc6egC3p6NP6qjZzWJ+Xg2vJURNYjkpHui/KctBwQjMPqpZK8/CHA==",
+      "type": "package",
+      "path": "libsodium/1.0.18",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "AUTHORS",
+        "ChangeLog",
+        "LICENSE",
+        "libsodium.1.0.18.nupkg.sha512",
+        "libsodium.nuspec",
+        "runtimes/linux-musl-x64/native/libsodium.so",
+        "runtimes/linux-x64/native/libsodium.so",
+        "runtimes/osx-x64/native/libsodium.dylib",
+        "runtimes/win-x64/native/libsodium.dll",
+        "runtimes/win-x86/native/libsodium.dll"
+      ]
+    },
+    "Microsoft.AspNetCore.Cryptography.Internal/2.1.0": {
+      "sha512": "oqKoj5d+zR7/R2T03jq69fJ5w48dJ3Yw+XO3ORJGIV7Vd4eJhwvAOpEQKC3vWyQIKZWEkndIxaWMbfODJY/vsQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.cryptography.internal/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.Internal.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.Internal.xml",
+        "microsoft.aspnetcore.cryptography.internal.2.1.0.nupkg.sha512",
+        "microsoft.aspnetcore.cryptography.internal.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Cryptography.KeyDerivation/2.1.0": {
+      "sha512": "13LH47Gj9SAY8BReIypBOQKT1Imlt1h11mbhk5rtI0s7R0jti7pjxZUKZEiVK8o9NUAGfL0yF6A2PXLRImBZ+w==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.cryptography.keyderivation/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll",
+        "lib/netcoreapp2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.xml",
+        "microsoft.aspnetcore.cryptography.keyderivation.2.1.0.nupkg.sha512",
+        "microsoft.aspnetcore.cryptography.keyderivation.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Http/2.2.2": {
@@ -1753,6 +1918,19 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Microsoft.Extensions.Identity.Core/2.1.0": {
+      "sha512": "ANFe9HR9thO9CU9x8mc7h1uw75Aqz5uDe7xgGM6t2iBITEidLNhULzqPidI0xV2Mg54pdPMA8/vtS5FRLCQWgQ==",
+      "type": "package",
+      "path": "microsoft.extensions.identity.core/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Identity.Core.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Identity.Core.xml",
+        "microsoft.extensions.identity.core.2.1.0.nupkg.sha512",
+        "microsoft.extensions.identity.core.nuspec"
+      ]
+    },
     "Microsoft.Extensions.Logging/7.0.0": {
       "sha512": "Nw2muoNrOG5U5qa2ZekXwudUn2BJcD41e65zwmDHb1fQegTX66UokLWZkJRpqSSHXDOWZ5V0iqhbxOEky91atA==",
       "type": "package",
@@ -2162,6 +2340,36 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "ScottBrady91.AspNetCore.Identity.Argon2PasswordHasher/1.4.0": {
+      "sha512": "epZlYb1tMgyr3aks9EuVXxrpIp3Ibvi/miDB73MpJfg3is3EL/rAywh0Rki5icwlCF7zWAKdu7ghvsqzNM5/TA==",
+      "type": "package",
+      "path": "scottbrady91.aspnetcore.identity.argon2passwordhasher/1.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/ScottBrady91.AspNetCore.Identity.Argon2PasswordHasher.dll",
+        "lib/netstandard2.0/ScottBrady91.AspNetCore.Identity.Argon2PasswordHasher.pdb",
+        "lib/netstandard2.0/ScottBrady91.AspNetCore.Identity.Argon2PasswordHasher.xml",
+        "scottbrady91.aspnetcore.identity.argon2passwordhasher.1.4.0.nupkg.sha512",
+        "scottbrady91.aspnetcore.identity.argon2passwordhasher.nuspec"
+      ]
+    },
+    "Sodium.Core/1.2.3": {
+      "sha512": "D5ORYOBE9nclyCAxEGe0AepSUTOwNhI3Aii/tzR/KqQanXNivmAFMANXmAiCYbN4aVbDAd/DxYA9qufIIpN4JQ==",
+      "type": "package",
+      "path": "sodium.core/1.2.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid90/Sodium.Core.dll",
+        "lib/netstandard1.6/Sodium.Core.dll",
+        "lib/netstandard2.0/Sodium.Core.dll",
+        "lib/xamarinios10/Sodium.Core.dll",
+        "sodium.core.1.2.3.nupkg.sha512",
+        "sodium.core.nuspec"
       ]
     },
     "Swashbuckle.AspNetCore/6.5.0": {
@@ -2842,6 +3050,50 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.ValueTuple/4.5.0": {
+      "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "type": "package",
+      "path": "system.valuetuple/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.ValueTuple.dll",
+        "lib/net461/System.ValueTuple.xml",
+        "lib/net47/System.ValueTuple.dll",
+        "lib/net47/System.ValueTuple.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.ValueTuple.dll",
+        "lib/netstandard1.0/System.ValueTuple.xml",
+        "lib/netstandard2.0/_._",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.ValueTuple.dll",
+        "ref/net47/System.ValueTuple.dll",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard2.0/_._",
+        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.valuetuple.4.5.0.nupkg.sha512",
+        "system.valuetuple.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Windows.Extensions/4.7.0": {
       "sha512": "CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "type": "package",
@@ -2890,6 +3142,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 7.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.10",
       "Pomelo.EntityFrameworkCore.MySql >= 7.0.0",
+      "ScottBrady91.AspNetCore.Identity.Argon2PasswordHasher >= 1.4.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -2970,6 +3223,10 @@
             "target": "Package",
             "version": "[7.0.0, )"
           },
+          "ScottBrady91.AspNetCore.Identity.Argon2PasswordHasher": {
+            "target": "Package",
+            "version": "[1.4.0, )"
+          },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.5.0, )"
@@ -2994,7 +3251,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/vinicius/.dotnet/sdk/7.0.400/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.413/RuntimeIdentifierGraph.json"
       }
     }
   }

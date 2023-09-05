@@ -5,7 +5,9 @@ using AutoMapper;
 using ClassLibrary3.DTO;
 using ClassLibrary3.Models;
 using ClassLibrary4.Context;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using ScottBrady91.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,6 +42,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IPasswordHasher<User>, Argon2PasswordHasher<User>>();
 
 var app = builder.Build();
 

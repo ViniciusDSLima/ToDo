@@ -7,7 +7,7 @@ public class User : EntityBase
 {
     public string Name { get; set; }
     public string Email { get; set; }
-    public string Password { get; set; }
+    public string Password { get; private set; }
 
     public virtual Collection<Assignment> Assignments { get; set; } = new();
     public virtual Collection<AssignmentList> AssignmentsLists { get; set; } = new();
@@ -47,21 +47,21 @@ public class User : EntityBase
     }
 
 
-    public void ChangeName(string name)
+    public void SetName(string name)
     {
         this.Name = name;
         validate();
     }
     
     
-    public void ChangeEmail(string email)
+    public void SetEmail(string email)
     {
         this.Email = email;
         validate();
     }
     
     
-    public void ChangePassword(string password)
+    public void SetPassword(string password)
     {
         this.Password = password;
         validate();
