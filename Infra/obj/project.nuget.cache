@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1Q4q8YNKTPrXaeG4O66uPVB98q0YzPCj+3XzUI62QJXCjNUSlsH5Uvy9AAbHi2lmEldGDfMAi5+I6VPPVlzZbQ==",
+  "dgSpecHash": "znxa6rDL54jaWIzbSkeOjKsE0646imD0IANYzEP1AQUrWlNPqU0H8Vi0CE6vWeGU/VhLQw1rtt2Dl3B7sJoq/w==",
   "success": true,
   "projectFilePath": "/home/vinicius/Projetos/C#/IFCE/ToDo/Infra/Infra.csproj",
   "expectedPackageFiles": [

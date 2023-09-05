@@ -5,7 +5,7 @@ using ClassLibrary3.DTO;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
-[Controller]
+[ApiController]
 [Route("api/v1/assignments")]
 public class AssignmentController : ControllerBase
 {
@@ -19,8 +19,7 @@ public class AssignmentController : ControllerBase
         _mapper = mapper;
     }
 
-    [HttpPost]
-    [Route("/cadastrar")]
+    [HttpPost("cadastrar")]
     public async Task<IActionResult> Cadastrar([FromBody] RegisterAssignmentRequest registerAssignmentRequest)
     {
         try
@@ -40,8 +39,7 @@ public class AssignmentController : ControllerBase
         }
     }
     
-    [HttpPut]
-    [Route("/atualizar")]
+    [HttpPut("atualizar")]
     public async Task<IActionResult> Atualizar([FromBody] UpdateAssignmentRequest updateAssignmentRequest)
     {
         try
@@ -68,8 +66,7 @@ public class AssignmentController : ControllerBase
         return Ok(assignments);
     }
 
-    [HttpGet]
-    [Route("/{id}")]
+    [HttpGet("get/{id}")]
     public async Task<IActionResult> Get(int id)
     {
         var assignment = await _assignmentService.Get(id);
@@ -81,8 +78,7 @@ public class AssignmentController : ControllerBase
         return Ok(assignment);
     }
 
-    [HttpDelete]
-    [Route("/delete/{id}")]
+    [HttpDelete("delete/{id}")]
     public async Task<IActionResult> Delete(int id)
     {
         try

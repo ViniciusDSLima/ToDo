@@ -5,7 +5,7 @@ using ClassLibrary3.DTO;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
-[Controller]
+[ApiController]
 [Route("api/v1/AssignmentList")]
 public class AssignmentListController : ControllerBase
 {
@@ -19,8 +19,7 @@ public class AssignmentListController : ControllerBase
     }
 
 
-    [HttpPost]
-    [Route("/cadastrar")]
+    [HttpPost("cadastrar")]
     public async Task<IActionResult> Cadastro([FromBody] RegisterAssignmentListRequest registerAssignmentListRequest)
     {
         try
@@ -36,8 +35,7 @@ public class AssignmentListController : ControllerBase
         }
     }
 
-    [HttpPut]
-    [Route("/atualizar")]
+    [HttpPut("atualizar")]
     public async Task<IActionResult> Update([FromBody] UpdateAssignmentListRequest updateAssignmentListRequest)
     {
         try
@@ -72,8 +70,7 @@ public class AssignmentListController : ControllerBase
         }
     }
 
-    [HttpGet]
-    [Route("/{id}")]
+    [HttpGet("get/{id}")]
     public async Task<IActionResult> GetById(int id)
     {
         try
@@ -90,6 +87,21 @@ public class AssignmentListController : ControllerBase
         catch (Exception e)
         {
             return BadRequest(e.Message);
+        }
+    }
+
+    [HttpDelete("get/{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        try
+        {
+            await _assignmentListService.Delete(id);
+
+            return NoContent();
+        }
+        catch (Exception e)
+        {
+            return BadRequest("Nao foi possivel apagar a assignmentList do banco de dados");
         }
     }
 }

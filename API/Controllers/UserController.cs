@@ -6,21 +6,20 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
 
-[Controller]
+[ApiController]
 [Route("ap1/v1/usuarios")]
-public class UsuarioController : ControllerBase
+public class UserController : ControllerBase
 {
     private readonly IUserService _userService;
     private readonly IMapper _mapper;
 
-    public UsuarioController(IUserService userService, IMapper mapper)
+    public UserController(IUserService userService, IMapper mapper)
     {
         _mapper = mapper;
         _userService = userService;
     }
 
-    [HttpPost]
-    [Route("/cadastro")]
+    [HttpPost("cadastrar")]
     public async Task<IActionResult> Cadastrar([FromBody] RegisterUsuarioRequest registerUsuarioRequest)
     {
         try
@@ -34,8 +33,7 @@ public class UsuarioController : ControllerBase
         }
     }
 
-    [HttpPut]
-    [Route("/atualizar")]
+    [HttpPut("atualizar")]
     public async Task<IActionResult> Atualizar([FromBody] UpdateUsuarioRequest updateUsuarioRequest)
     {
         try
@@ -63,9 +61,8 @@ public class UsuarioController : ControllerBase
         }
     }
 
-    [HttpGet]
-    [Route("/{id}")]
-    public async Task<IActionResult> Get(int id)
+    [HttpGet("get/{id}")]
+    public async Task<IActionResult> GetById(int id)
     {
         try
         {
@@ -83,8 +80,7 @@ public class UsuarioController : ControllerBase
         }
     }
 
-    [HttpDelete]
-    [Route("/{id}")]
+    [HttpDelete("delete/{id}")]
     public async Task<IActionResult> Delete(int id)
     {
         try
