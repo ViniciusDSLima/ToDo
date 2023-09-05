@@ -10,11 +10,7 @@ public class TodoDbContext : DbContext
     public DbSet<Assignment> Assignments { get; set; }
     public DbSet<AssignmentList> AssignmentLists  { get; set; }
 
-    protected TodoDbContext(DbContextOptions<TodoDbContext> dbContextOptions) : base(dbContextOptions)
-    {
-    }
-
-    protected TodoDbContext()
+    public TodoDbContext(DbContextOptions<TodoDbContext> dbContextOptions) : base(dbContextOptions)
     {
     }
 

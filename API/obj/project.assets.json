@@ -1091,7 +1091,8 @@
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.EntityFrameworkCore": "7.0.10",
           "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
-          "ScottBrady91.AspNetCore.Identity.Argon2PasswordHasher": "1.4.0"
+          "ScottBrady91.AspNetCore.Identity.Argon2PasswordHasher": "1.4.0",
+          "Swashbuckle.AspNetCore": "6.5.0"
         },
         "compile": {
           "bin/placeholder/Application.dll": {}
@@ -1110,7 +1111,8 @@
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.EntityFrameworkCore": "7.0.10",
           "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
-          "ScottBrady91.AspNetCore.Identity.Argon2PasswordHasher": "1.4.0"
+          "ScottBrady91.AspNetCore.Identity.Argon2PasswordHasher": "1.4.0",
+          "Swashbuckle.AspNetCore": "6.5.0"
         },
         "compile": {
           "bin/placeholder/Domain.dll": {}
@@ -1130,7 +1132,8 @@
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.EntityFrameworkCore": "7.0.10",
           "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
-          "ScottBrady91.AspNetCore.Identity.Argon2PasswordHasher": "1.4.0"
+          "ScottBrady91.AspNetCore.Identity.Argon2PasswordHasher": "1.4.0",
+          "Swashbuckle.AspNetCore": "6.5.0"
         },
         "compile": {
           "bin/placeholder/Infra.dll": {}

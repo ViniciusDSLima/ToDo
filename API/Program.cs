@@ -29,9 +29,9 @@ var autoMapperConfig = new MapperConfiguration(config =>
 });
 
 
-var mysqlConnection = builder.Configuration.GetConnectionString("DefautlConnection");
-builder.Services.AddDbContext<TodoDbContext>(options => options.UseMySql(
-    mysqlConnection, ServerVersion.AutoDetect(mysqlConnection)));
+var mysqlConnection = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<TodoDbContext>(options =>
+    options.UseMySql(mysqlConnection, ServerVersion.AutoDetect(mysqlConnection)));
 
 
 
