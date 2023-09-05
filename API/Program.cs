@@ -1,3 +1,5 @@
+using System.Configuration;
+using System.Text;
 using API.Request;
 using API.Request.Assignment;
 using API.Request.AssignmentList;
@@ -5,6 +7,7 @@ using AutoMapper;
 using ClassLibrary3.DTO;
 using ClassLibrary3.Models;
 using ClassLibrary4.Context;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ScottBrady91.AspNetCore.Identity;
@@ -43,6 +46,15 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IPasswordHasher<User>, Argon2PasswordHasher<User>>();
+
+var key = Encoding.ASCII.GetBytes(Settings)
+
+builder.Services
+    .AddAuthentication(x =>
+    {
+        x.DefaultAuthenticateScheme = 
+    })
+
 
 var app = builder.Build();
 

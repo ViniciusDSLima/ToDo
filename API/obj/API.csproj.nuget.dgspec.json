@@ -54,6 +54,10 @@
               "target": "Package",
               "version": "[11.7.1, )"
             },
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
               "version": "[2.2.2, )"
@@ -163,6 +167,10 @@
               "target": "Package",
               "version": "[11.7.1, )"
             },
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
               "version": "[2.2.2, )"
@@ -261,6 +269,10 @@
             "FluentValidation": {
               "target": "Package",
               "version": "[11.7.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
@@ -364,6 +376,10 @@
             "FluentValidation": {
               "target": "Package",
               "version": "[11.7.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
