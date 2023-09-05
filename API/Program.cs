@@ -1,3 +1,4 @@
+
 using System.Configuration;
 using System.Text;
 using API.Request;
@@ -6,10 +7,13 @@ using API.Request.AssignmentList;
 using AutoMapper;
 using ClassLibrary3.DTO;
 using ClassLibrary3.Models;
+using ClassLibrary4;
 using ClassLibrary4.Context;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using ScottBrady91.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -47,13 +51,29 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IPasswordHasher<User>, Argon2PasswordHasher<User>>();
 
-var key = Encoding.ASCII.GetBytes(Settings)
+var key = Encoding.ASCII.GetBytes(Settings.Secret);
 
 builder.Services
     .AddAuthentication(x =>
     {
-        x.DefaultAuthenticateScheme = 
+        x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
     })
+    .AddJwtBearer(x =>
+    {
+        x.RequireHttpsMetadata = false;
+        x.SaveToken = true;
+        x.TokenValidationParameters = new TokenValidationParameters
+        
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(key),
+            ValidateIssuer = false,
+            ValidateAudience = false
+        };
+        
+
+    });
 
 
 var app = builder.Build();

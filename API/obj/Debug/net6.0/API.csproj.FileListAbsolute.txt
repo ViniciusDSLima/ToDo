@@ -86,3 +86,11 @@
 /home/vinicius/Projetos/C#/IFCE/ToDo/API/obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.API.props
 /home/vinicius/Projetos/C#/IFCE/ToDo/API/obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.API.props
 /home/vinicius/Projetos/C#/IFCE/ToDo/API/obj/Debug/net6.0/staticwebassets.pack.json
+/home/vinicius/Projetos/C#/IFCE/ToDo/API/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/vinicius/Projetos/C#/IFCE/ToDo/API/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+/home/vinicius/Projetos/C#/IFCE/ToDo/API/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/vinicius/Projetos/C#/IFCE/ToDo/API/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll
+/home/vinicius/Projetos/C#/IFCE/ToDo/API/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll
+/home/vinicius/Projetos/C#/IFCE/ToDo/API/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/vinicius/Projetos/C#/IFCE/ToDo/API/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll
+/home/vinicius/Projetos/C#/IFCE/ToDo/API/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll
