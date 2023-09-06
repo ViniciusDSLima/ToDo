@@ -48,7 +48,7 @@ public class AssignmentListService : IAssignmentListService
         }
 
         var assignmentList = _mapper.Map<AssignmentList>(assignmentListDto);
-        assignmentList.UsuarioId = GetUsuarioId();
+        assignmentList.UserId = GetUsuarioId();
         assignmentList.validate();
 
         var assignmentListUpdated = await _assignmentListRepository.Update(assignmentList);

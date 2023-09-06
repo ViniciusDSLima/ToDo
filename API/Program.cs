@@ -5,10 +5,14 @@ using API.Request;
 using API.Request.Assignment;
 using API.Request.AssignmentList;
 using AutoMapper;
+using ClassLibrary1.Interfaces;
+using ClassLibrary1.Services.Implementation;
 using ClassLibrary3.DTO;
 using ClassLibrary3.Models;
 using ClassLibrary4;
 using ClassLibrary4.Context;
+using ClassLibrary4.Repository;
+using ClassLibrary4.Repository.Implements;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Identity;
@@ -26,7 +30,7 @@ var autoMapperConfig = new MapperConfiguration(config =>
 
     config.CreateMap<Assignment, AssignmentDTO>().ReverseMap();
     config.CreateMap<RegisterAssignmentRequest, UserDTO>().ReverseMap();
-    config.CreateMap<UserDTO, UpdateAssignmentRequest>().ReverseMap();
+    config.CreateMap<AssignmentDTO, UpdateAssignmentRequest>().ReverseMap();
 
     config.CreateMap<AssignmentList, AssignmentListDTO>().ReverseMap();
     config.CreateMap<RegisterAssignmentListRequest, AssignmentListDTO>().ReverseMap();
@@ -34,6 +38,7 @@ var autoMapperConfig = new MapperConfiguration(config =>
 
 
 });
+builder.Services.AddSingleton(autoMapperConfig.CreateMapper());
 
 
 var mysqlConnection = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -49,7 +54,23 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddSingleton(x => builder.Configuration);
+
+builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IPasswordHasher<User>, Argon2PasswordHasher<User>>();
+
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
+
+builder.Services.AddScoped<IAssignmentRepository, AssignmentRepository>();
+builder.Services.AddScoped<IAssignmentService,AssignmentService>();
+
+
+builder.Services.AddScoped<IAssignmentListRepository, AssignmentListRepository>();
+builder.Services.AddScoped<IAssignmentListService, AssignmentListService>();
+
+builder.Services.AddHttpContextAccessor();
 
 var key = Encoding.ASCII.GetBytes(Settings.Secret);
 

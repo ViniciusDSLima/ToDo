@@ -24,7 +24,7 @@ public class AssignmentListValidator : AbstractValidator<AssignmentList>
             .MaximumLength(255)
             .WithMessage("O nome te de ter no maximo 255 caracteres");
 
-        RuleFor(x => x.UsuarioId)
+        RuleFor(x => x.UserId)
             .NotNull()
             .WithMessage("O UsuarioId nao pode ser nulo");
     }

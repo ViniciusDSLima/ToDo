@@ -6,4 +6,5 @@ public interface IAssignmentListRepository : IEntityBaseRepository<AssignmentLis
 {
     Task<AssignmentList> GetById(int id, int userId);
     Task<List<AssignmentList>> GetAll(int userId);
+    Task Delete(int id);
 }

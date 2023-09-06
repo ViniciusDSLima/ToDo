@@ -19,11 +19,11 @@ public class AssignmentService : IAssignmentService
 
     public async Task<AssignmentDTO> Create(AssignmentDTO assignmentDto)
     {
-        var assignmentExists = await _assignmentRepository.GetByName(assignmentDto.Name);
+        var assignmentExists = await _assignmentRepository.GetByDescription(assignmentDto.Description);
 
         if (assignmentExists != null)
         {
-            throw new Exception("Ja existe uma task com esse nome");
+            throw new Exception("Ja existe uma task com essa descricao");
         }
 
         var assignment = _mapper.Map<Assignment>(assignmentDto);
@@ -87,13 +87,13 @@ public class AssignmentService : IAssignmentService
         await _assignmentRepository.Delete(id);
     }
     
-    public async Task<AssignmentDTO> GetByName(string name)
+    public async Task<AssignmentDTO> GetByDescription(string email)
     {
-        var assignment = await _assignmentRepository.GetByName(name);
+        var assignment = await _assignmentRepository.GetByDescription(email);
 
         if (assignment ==  null)
         {
-            throw new Exception("Nao existe nenhuma task com o nome informado");
+            throw new Exception("Nao existe nenhuma task com a descricao informada");
         }
 
         return _mapper.Map<AssignmentDTO>(assignment);

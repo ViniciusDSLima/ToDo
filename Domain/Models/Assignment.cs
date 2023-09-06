@@ -5,7 +5,7 @@ namespace ClassLibrary3.Models;
 
 public class Assignment : EntityBase
 {
-    public int UsuarioId { get; set; }
+    public int UserId { get; set; }
     public string Description { get; set; }
     public bool Conclued { get; set; }
     public DateTime? ConcluedAt { get; set; }
@@ -19,9 +19,9 @@ public class Assignment : EntityBase
     {
     }
 
-    public Assignment(int usuarioId, string description, bool conclued, DateTime concluedAt, DateTime deadLine, int assignmentListId, AssignmentList assignmentList)
+    public Assignment(int userId, string description, bool conclued, DateTime concluedAt, DateTime deadLine, int assignmentListId, AssignmentList assignmentList)
     {
-        UsuarioId = usuarioId;
+        UserId = userId;
         Description = description;
         Conclued = conclued;
         ConcluedAt = concluedAt;

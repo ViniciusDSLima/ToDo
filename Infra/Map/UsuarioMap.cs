@@ -28,12 +28,12 @@ public class UsuarioMap : IEntityTypeConfiguration<User>
 
         builder.HasMany(u => u.AssignmentsLists)
             .WithOne(u => u.User)
-            .HasForeignKey(u => u.UsuarioId)
+            .HasForeignKey(u => u.UserId)
             .OnDelete(DeleteBehavior.Restrict);
 
         builder.HasMany(u => u.Assignments)
             .WithOne(u => u.User)
-            .HasForeignKey(u => u.UsuarioId)
+            .HasForeignKey(u => u.UserId)
             .OnDelete(DeleteBehavior.Restrict);
 
     }

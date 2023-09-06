@@ -4,6 +4,7 @@ using ClassLibrary3.DTO.Auth;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
+
 [ApiController]
 [Route("api/v1/auth")]
 public class AuthController : ControllerBase
@@ -15,8 +16,7 @@ public class AuthController : ControllerBase
         _authService = authService;
     }
 
-    [HttpPost]
-    [Route("/register")]
+    [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] RegisterDTO registerDto)
     {
         try
@@ -30,8 +30,7 @@ public class AuthController : ControllerBase
         }
     }
 
-    [HttpPost]
-    [Route("/login")]
+    [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginDTO loginDto)
     {
         var user = new LoginDTO(

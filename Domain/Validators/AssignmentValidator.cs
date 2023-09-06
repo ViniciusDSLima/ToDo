@@ -17,7 +17,7 @@ public class AssignmentValidator : AbstractValidator<Assignment>
             .MinimumLength(3)
             .WithMessage("A descricao deve ter no minino 3 caracteres");
 
-        RuleFor(x => x.UsuarioId)
+        RuleFor(x => x.UserId)
             .GreaterThan(0)
             .WithMessage("O Id do usuario deve ser maior que 0");
 

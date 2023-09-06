@@ -8,5 +8,4 @@ public interface IEntityBaseRepository<T> where T : EntityBase
     Task<T> Update(T obj);
     Task<List<T>> Get();
     Task<T> Get(int id);
-    Task<T> Delete(int id);
 }

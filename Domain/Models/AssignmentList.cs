@@ -8,7 +8,7 @@ public class AssignmentList : EntityBase
 {
     public int Id { get; set; }
     public string Name { get; set; }
-    public int UsuarioId { get; set; }
+    public int UserId { get; set; }
 
     public virtual User User { get; set; }
     public virtual Collection<Assignment> Assignments { get; set; } = new();
@@ -17,11 +17,11 @@ public class AssignmentList : EntityBase
     {
     }
 
-    public AssignmentList(int id, string name, int usuarioId)
+    public AssignmentList(int id, string name, int userId)
     {
         Id = id;
         Name = name;
-        UsuarioId = usuarioId;
+        UserId = userId;
         _errors = new List<string>();
     }
 

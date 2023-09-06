@@ -16,7 +16,7 @@ public class AssignmentMap : IEntityTypeConfiguration<Assignment>
             .HasColumnType("VARCHAR(255)")
             .HasMaxLength(255);
 
-        builder.Property(x => x.UsuarioId)
+        builder.Property(x => x.UserId)
             .IsRequired();
 
         builder.Property(x => x.Conclued)

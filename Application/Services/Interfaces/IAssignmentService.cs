@@ -8,6 +8,6 @@ public interface IAssignmentService
     Task<AssignmentDTO> Update(AssignmentDTO assignmentDto);
     Task<AssignmentDTO> Get(int id);
     Task<List<AssignmentDTO>> Get();
-    Task<AssignmentDTO> GetByName(string name);
+    Task<AssignmentDTO> GetByDescription(string name);
     Task Delete(int id);
 }
